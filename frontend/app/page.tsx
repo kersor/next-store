@@ -1,0 +1,13 @@
+import { Container } from "@/components/shared/Container";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+export default function Home() {
+  return (
+    <div>
+      <Container>
+        
+      </Container>
+    </div>
+  );
+}
