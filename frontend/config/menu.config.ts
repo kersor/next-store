@@ -1,6 +1,3 @@
-
-
-
 export const menu = [
     {
         link: "/",
@@ -28,3 +25,5 @@ export const menu = [
         main: false
     }
 ]
+
+

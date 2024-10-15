@@ -9,18 +9,20 @@ import {
 
 interface ISelectCustom {
     className?: string,
-    data: any
+    data: any,
+    placeholder: string
 }
 
 export function SelectCustom ({
     className,
-    data
+    data,
+    placeholder
 }: ISelectCustom) {
     return (
         <div className={cn("", className)}>
             <Select>
-                <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Тип" />
+                <SelectTrigger className="w-full">
+                    <SelectValue placeholder={placeholder} />
                 </SelectTrigger>
                 <SelectContent>
                     {

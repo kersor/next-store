@@ -2,17 +2,7 @@ import { cn } from "@/lib/utils"
 import { Flex } from "./Flex"
 
 import { SelectCustom } from "../ui/select-custom"
-
-export const DATA_TYPE = [
-    {
-        title: 'Телевизоры',
-        value: '1'
-    },
-    {
-        title: 'Аудио',
-        value: '2'
-    }
-]
+import { FILTER_BRANDS, FILTER_CATEGORY, FILTER_COLORS, FILTER_SALE } from "@/config/filters.config"
   
 
 interface ITopBar {
@@ -23,9 +13,18 @@ export function TopBar ({
     className
 }: ITopBar) {
     return (
-        <Flex className={cn("mt-[20px]", className)}> 
+        <Flex className={cn("mt-[20px] gap-[10px]", className)}> 
             <SelectCustom 
-                data={DATA_TYPE}
+                data={FILTER_CATEGORY.data}
+                placeholder={FILTER_CATEGORY.placeholder}
+            />
+            <SelectCustom 
+                data={FILTER_BRANDS.data}
+                placeholder={FILTER_BRANDS.placeholder}
+            />
+            <SelectCustom 
+                data={FILTER_COLORS.data}
+                placeholder={FILTER_COLORS.placeholder}
             />
         </Flex>
     )
