@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { Flex } from "./Flex"
 
 import { SelectCustom } from "../ui/select-custom"
-import { FILTER_BRANDS, FILTER_CATEGORY, FILTER_COLORS, FILTER_SALE } from "@/config/filters.config"
+import { FILTER_BRANDS, FILTER_CATEGORY, FILTER_COLORS } from "@/config/filters.config"
   
 
 interface ITopBar {

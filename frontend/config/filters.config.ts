@@ -1,37 +1,39 @@
-export const FILTER_CATEGORY = {
+import { IFilterCategory } from "@/types/filterCategory.type"
+
+export const FILTER_CATEGORY: IFilterCategory = {
     placeholder: 'Категория',
     data: [
         {
-            title: 'Все категории',
-            value: 'all_categoey',
+            title: 'Все',
+            value: 'all_category',
         },
         {
-            title: 'Смартфоны и планшеты',
-            value: 'phones_tablets',
+            title: 'Смартфоны',
+            value: 'phone',
         },
         {
-            title: 'Ноутбуки и компьютеры',
-            value: 'laptops_computers',
+            title: 'Ноутбуки',
+            value: 'laptops',
         },
         {
-            title: 'Телевизоры и проекторы',
-            value: 'tvs_projectors',
+            title: 'Телевизоры',
+            value: 'tvs',
         },
         {
-            title: 'Аудио и видеотехника',
-            value: 'audio_video',
+            title: 'Аудио',
+            value: 'audio',
         },
         {
             title: 'Фото и видеокамеры',
             value: 'photo_video',
         },
         {
-            title: 'Игровые консоли и аксессуары',
-            value: 'game_consoles_accessories',
+            title: 'Игровые консоли',
+            value: 'game_consoles',
         },
         {
-            title: 'Умные часы и фитнес-трекеры',
-            value: 'smartwatches_fitness_trackers',
+            title: 'Умные часы',
+            value: 'smartwatches',
         },
         {
             title: 'Бытовая техника',

@@ -19,7 +19,7 @@ export function Header ({
     className
 }: IHeader) {
     return (
-        <header className={cn("fixed w-full bg-[#FFF]", className)} >
+        <header className={cn("absolute w-full z-10 bg-[#FFF]", className)} >
             <Container className="flex items-center justify-between h-[90px]">
                 <Flex className="items-center gap-[30px]">
                     {menu.map(item => 

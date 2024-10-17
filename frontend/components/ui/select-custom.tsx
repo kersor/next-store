@@ -26,7 +26,7 @@ export function SelectCustom ({
                 </SelectTrigger>
                 <SelectContent>
                     {
-                        data.map((item: any) => <SelectItem value={item.value}>{item.title}</SelectItem>)
+                        data.map((item: any) => <SelectItem key={item.value} value={item.value}>{item.title}</SelectItem>)
                     }
                 </SelectContent>
             </Select>

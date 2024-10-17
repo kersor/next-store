@@ -10,6 +10,6 @@ export function Container ({
     children
 }: IContainer) {
     return (
-        <div className={cn("max-w-[1430px] px-[15px] mx-auto", className)}>{children}</div>
+        <div className={cn("max-w-[1200px] px-[15px] mx-auto", className)}>{children}</div>
     )
 }

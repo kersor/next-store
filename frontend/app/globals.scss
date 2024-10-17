@@ -64,3 +64,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки для WebKit-браузеров */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Для Internet Explorer и Edge */
+  scrollbar-width: none; /* Для Firefox */
+}
