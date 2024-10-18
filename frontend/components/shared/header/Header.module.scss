@@ -1,5 +1,5 @@
 .header {
-    &_search {
+    &_searchDesktop {
         @apply items-center relative w-[30px] h-[40px];
         transition: all 0.5s ease;
         &_active{
@@ -32,4 +32,31 @@
            }
         }
     }
+
+    &_searchMiddle {
+        
+    }
+}
+
+
+@media (max-width: 900px) {
+    .header {
+        &_searchDesktop{
+            &_active{
+                width: 200px;
+            }
+            &Body{
+                padding: 0;
+                input {
+                    width: 100px;
+                    padding: 0;
+                    font-size: 12px;
+                }
+                &_active {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
 }

@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/shared/Container";
 import { Flex } from "@/components/shared/Flex";
-import { Header } from "@/components/shared/Header";
+import { Header } from "@/components/shared/header/Header";
 import { TopBar } from "@/components/shared/Top-bar";
 import { Button } from "@/components/ui/button";
 import { FILTER_CATEGORY } from "@/config/filters.config";
