@@ -21,36 +21,8 @@ export function SearchMenuBig ({
     const active_iconSearch = activeSearch ? styles.header_search__iconSearch_active : "" 
     const active_body = activeSearch ? styles.header_search__body_active : "" 
     const active_search = activeSearch ? styles.header_search__active : ""
+
     return (
-        // <Flex className={cn(styles.header_searchDesktop, searchDesktop_active)}>
-            // <Search 
-            //     className={cn("cursor-pointer transition-all duration-500", activeSearch ? "opacity-0" : "opacity-100")} 
-            //     onClick={() => setActiveSearch(true)} 
-            //     size={20} 
-            //     strokeWidth={1} 
-            // />
-        //     <Flex className={cn(styles.header_searchDesktopBody, searchDesktopBody_active)}>
-                // <input 
-                //     disabled={!activeSearch} 
-                //     placeholder="Поиск..." 
-                //     value={inputValue} 
-                //     onChange={(e) => setInputValue(e.target.value)} 
-                // />
-                // <X 
-                //     cursor={'pointer'} 
-                //     onClick={() => setInputValue("")} 
-                //     size={20} 
-                //     strokeWidth={1} 
-                // />
-        //         <Button  
-        //             onClick={() => setActiveSearch(false)} 
-        //             className="text-[12px] ml-[5px]" 
-        //             size={"smal"}
-        //         >
-        //             Закрыть
-        //         </Button>
-        //     </Flex>
-        // </Flex>
         <Flex className={cn(styles.header_search, active_search)}>
             <Search 
                 className={cn(styles.header_search__iconSearch, active_iconSearch)} 
@@ -62,7 +34,6 @@ export function SearchMenuBig ({
                 <Flex className={cn(styles.header_search__bodyInput)}>
                     <input 
                         className={cn(styles.header_search__bodyInput_input)}
-                        // disabled={!activeSearch} 
                         placeholder="Поиск..." 
                         value={inputValue} 
                         onChange={(e) => setInputValue(e.target.value)} 
@@ -98,7 +69,7 @@ export function SearchMenuMiddle ({
     const active_iconSearch = activeSearch ? styles.header_search__iconSearch_active : "" 
     const active_body = activeSearch ? styles.header_search__body_active : "" 
     const active_search = activeSearch ? styles.header_search__active : ""
-    
+
     return (
         <Flex className={cn(styles.header_search, active_search)}>
             <Search 
@@ -111,7 +82,6 @@ export function SearchMenuMiddle ({
                 <Flex className={cn(styles.header_search__bodyInput)}>
                     <input 
                         className={cn(styles.header_search__bodyInput_input)}
-                        // disabled={!activeSearch} 
                         placeholder="Поиск..." 
                         value={inputValue} 
                         onChange={(e) => setInputValue(e.target.value)} 

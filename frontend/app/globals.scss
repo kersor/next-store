@@ -74,3 +74,10 @@
   -ms-overflow-style: none; /* Для Internet Explorer и Edge */
   scrollbar-width: none; /* Для Firefox */
 }
+
+.swiper-pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px ;
+}

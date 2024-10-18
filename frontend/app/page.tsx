@@ -1,5 +1,6 @@
 "use client"
 
+import { CarouselComponent } from "@/components/shared/CarouselComponent";
 import { Container } from "@/components/shared/Container";
 import { Flex } from "@/components/shared/Flex";
 import { Header } from "@/components/shared/header/Header";
@@ -15,9 +16,8 @@ import { useRef, useState } from "react";
 
 export default function Home() {
   return (
-      <Container className="pt-[90px]" >
-        {/* <TopBar /> */}
-        
+      <Container className="pt-[16px] relative" >
+        <CarouselComponent />
       </Container>
   );
 }

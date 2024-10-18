@@ -35,8 +35,7 @@ export function Header ({
             }
         };
 
-        // Initialize width only on the client
-        updateWidth(); // Set initial width
+        updateWidth(); 
         window.addEventListener('resize', updateWidth);
 
         return () => {

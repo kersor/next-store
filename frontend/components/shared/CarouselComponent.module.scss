@@ -1,0 +1,22 @@
+.swiperPaginationBullet {
+    cursor: pointer;
+    display: block;
+    background: #FFF ;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.swiperPaginationBulletActive {
+    display: block;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+
+.carousel {
+    box-shadow: 0px 5px 20px 0px rgba(158, 158, 158, 1);
+    border-radius: 10px;
+}
