@@ -45,7 +45,7 @@ export function Header ({
     }, []);
 
 
-        console.log(width)
+
     return (
         <Container className="h-[42px] mt-[64px] max-[1200px]:mt-[20px]">
             {/* >800px */}
@@ -54,7 +54,6 @@ export function Header ({
             {width !== undefined && width <= 800 && width >= 500 && <DeviceMiddle />}
             {/* 500px */}
             {width !== undefined && width < 500 && <DeviceSmall />}
-
         </Container>
     )
 }
