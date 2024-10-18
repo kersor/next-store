@@ -16,7 +16,7 @@ import { useRef, useState } from "react";
 export default function Home() {
   return (
       <Container className="pt-[90px]" >
-        <TopBar />
+        {/* <TopBar /> */}
         
       </Container>
   );
