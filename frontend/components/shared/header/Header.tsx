@@ -46,7 +46,7 @@ export function Header ({
 
 
     return (
-        <Container className="h-[42px] mt-[64px] max-[1200px]:mt-[20px]">
+        <Container className="h-[42px] mt-[64px] max-[1200px]:mt-[20px] max-[500px]:mb-[34px]">
             {/* >800px */}
             {width !== undefined && width > 800 && <DeviceBig />}
             {/* 800px */}

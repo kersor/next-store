@@ -52,3 +52,19 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    .header {
+        &_search {
+            &__body {
+                @apply w-[250px];
+                &Input_input {
+                    @apply w-[133px] ;
+                }
+            }
+            &__active {
+                @apply w-[250px];
+            }
+        }
+    }
+}
