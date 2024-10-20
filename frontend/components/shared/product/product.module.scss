@@ -1,10 +1,92 @@
 .product{
+    @apply transition-all duration-300 max-w-[300px] w-full ;
+    &:hover {
+        @apply translate-y-[-10px] ;
+    }
     &_photo {
-        @apply w-[300px] h-[300px] relative rounded-[8px];
+        @apply h-[300px] w-full relative rounded-[8px];
         &__hover{
             @apply absolute top-0 left-0 w-full h-full bg-[rgba(255,255,255,0.6)] opacity-0 z-[-10] transition-all duration-200;
             .product_photo:hover & {
                 @apply z-[10] opacity-100;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .product{
+        &_photo {
+            @apply h-[285px] ;
+            &__hover {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .product{
+        &_photo {
+            @apply h-[220px] ;
+            &__hover {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .product{
+        &_photo {
+            @apply h-[170px] ;
+            &__hover {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .product{
+        &_photo {
+            @apply h-[270px] ;
+            &__hover {
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .product{
+        &_photo {
+            @apply h-[230px] ;
+            &__hover {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .product{
+        &_photo {
+            @apply h-[185px] ;
+            &__hover {
+
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .product{
+        &_photo {
+            @apply h-[136px] ;
+            &__hover {
+
             }
         }
     }

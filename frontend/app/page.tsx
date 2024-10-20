@@ -45,10 +45,10 @@ export default function Home() {
   return (
       <Container className="pt-[16px] relative" >
         <CarouselComponent />
-        <Flex className="mt-[70px] justify-end">
-          <Link className="text-[#A18A68] text-[16px]" href='/shop'>Смотреть все</Link>
+        <Flex className="mt-[70px] justify-between max-[700px]:mt-[40px] max-[600px]:mt-[25px]">
+          <div className="text-[20px] max-[600px]:text-[16px]">Новинки</div><Link className="text-[#A18A68] text-[16px] max-[600px]:text-[14px]" href='/shop'>Все</Link>
         </Flex>
-        <Flex className="gap-[10px] flex-wrap mt-[150px]">
+        <Flex className="gap-[10px] mt-[150px] max-[1200px]:mt-[100px] max-[950px]:mt-[50px] max-[600px]:mt-[14px] max-[600px]:grid max-[600px]:grid-cols-2">
           {
             newProducts.map((item, index) => (
               <Product key={item.id} item={item} />

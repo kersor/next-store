@@ -13,6 +13,7 @@ import Bag from '@/../../public/icon/bag.svg'
 import { Flex } from "../Flex"
 import { Eye, Heart, ShoppingBag } from "lucide-react"
 import { useRouter } from 'next/navigation'
+import LongName from "@/components/ui/longName"
 
 
 
@@ -76,7 +77,7 @@ export function Product({
         </div>
       </div>
       <div className="mt-[10px] text-[14px]">
-        <div className="font-semibold">{item.title}</div>
+        <LongName className="font-semibold" title={item.title} />
         <div className="">{price}</div>
       </div>
     </div>
