@@ -1,6 +1,6 @@
 "use client"
 
-import { CarouselComponent } from "@/components/shared/CarouselComponent";
+import { CarouselComponent } from "@/components/shared/Carousel/CarouselComponent";
 import { Container } from "@/components/shared/Container";
 import { Flex } from "@/components/shared/Flex";
 import { Header } from "@/components/shared/header/Header";
