@@ -26,7 +26,7 @@ export function CarouselComponent() {
     return (
         <div className={styles.carousel} style={{ width: '100%', overflow: 'hidden' }}> 
             <Swiper
-                style={{ height: '630px', width: '100%' }} 
+                style={{ width: '100%' }} 
                 spaceBetween={0}                
                 pagination={{
                     clickable: true,
@@ -35,6 +35,7 @@ export function CarouselComponent() {
                 }} 
                 navigation
                 modules={[Pagination]} 
+                className='h-[630px] max-[1200px]:h-[500px] max-[900px]:h-[400px] max-[700px]:h-[354px]'
             >
                 {images.map((item, index) => (
                     <SwiperSlide key={index}>

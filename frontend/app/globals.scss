@@ -81,3 +81,9 @@
   justify-content: center;
   gap: 10px ;
 }
+
+@media (max-width: 900px) {
+  .swiper-pagination {
+    gap: 5px;
+  }
+}
