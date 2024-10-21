@@ -38,6 +38,18 @@ const newProducts: IProductItem[] = [
     title: 'Hair Pin Set of 3',
     price: 30,
     photo: '4.jpg'
+  },
+  {
+    id: 5,
+    title: 'Hair Pin Set of 3',
+    price: 19,
+    photo: '5.jpg'
+  },
+  {
+    id: 6,
+    title: 'Hair Pin Set of 3',
+    price: 29,
+    photo: '6.jpg'
   }
 ]
 
@@ -48,14 +60,20 @@ export default function Home() {
         <Flex className="mt-[70px] justify-between max-[700px]:mt-[40px] max-[600px]:mt-[25px]">
           <div className="text-[20px] max-[600px]:text-[16px]">Новинки</div><Link className="text-[#A18A68] text-[16px] max-[600px]:text-[14px]" href='/shop'>Все</Link>
         </Flex>
-        <Flex className="gap-[10px] mt-[150px] max-[1200px]:mt-[100px] max-[950px]:mt-[50px] max-[600px]:mt-[14px] max-[600px]:grid max-[600px]:grid-cols-2">
+        {/* <Flex className="gap-[10px] mt-[150px] max-[1200px]:mt-[100px] max-[950px]:mt-[50px] max-[600px]:mt-[14px] max-[600px]:grid max-[600px]:grid-cols-2">
           {
             newProducts.map((item, index) => (
               <Product key={item.id} item={item} />
             ))
           }
-        </Flex>
-        <div className="h-[1000px]"></div>
+        </Flex> */}
+        <div className="grid grid-cols-4 gap-[10px] max-[600px]:grid-cols-2">
+          {
+            newProducts.map((item, index) => (
+              <Product key={item.id} item={item} />
+            ))
+          }
+        </div>
       </Container>
   );
 }
