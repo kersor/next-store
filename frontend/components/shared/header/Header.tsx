@@ -26,33 +26,27 @@ interface IHeader {
 export function Header ({
     className
 }: IHeader) {
-    const [width, setWidth] = useState<number | undefined>(undefined);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
 
     useEffect(() => {
-        const updateWidth = () => {
-            if (typeof window !== 'undefined') {
-                setWidth(window.innerWidth);
-            }
-        };
-
-        updateWidth(); 
-        window.addEventListener('resize', updateWidth);
-
+        const handleResize = () => setWindowWidth(prev => window.innerWidth);
+        handleResize(); 
+        window.addEventListener('resize', handleResize);
+        
         return () => {
-            window.removeEventListener('resize', updateWidth);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
 
-
-    return (
+    return ( 
         <Container className="h-[42px] mt-[64px] max-[1200px]:mt-[20px] max-[500px]:mb-[34px]">
             {/* >800px */}
-            {width !== undefined && width > 800 && <DeviceBig />}
+            {windowWidth > 800 && <DeviceBig />}
             {/* 800px */}
-            {width !== undefined && width <= 800 && width >= 500 && <DeviceMiddle />}
+            {windowWidth <= 800 && windowWidth >= 500 && <DeviceMiddle />}
             {/* 500px */}
-            {width !== undefined && width < 500 && <DeviceSmall />}
+            {windowWidth < 500 && <DeviceSmall />}
         </Container>
     )
 }
