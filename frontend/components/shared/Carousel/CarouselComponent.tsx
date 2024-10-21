@@ -2,10 +2,12 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { A11y, Navigation, Pagination } from 'swiper/modules';
+import { A11y, Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 import styles from './CarouselComponent.module.scss';
 import Link from 'next/link';
 import { CarouselComponentInfo } from './CarouselComponentInfo';
+
 
 export function CarouselComponent() {
     const images = [
@@ -26,6 +28,12 @@ export function CarouselComponent() {
     return (
         <div className={styles.carousel} style={{ width: '100%', overflow: 'hidden' }}> 
             <Swiper
+                loop={true}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false
+                }}
+                speed={200}
                 style={{ width: '100%' }} 
                 spaceBetween={0}                
                 pagination={{
@@ -34,7 +42,7 @@ export function CarouselComponent() {
                     bulletActiveClass: styles.swiperPaginationBulletActive, 
                 }} 
                 navigation
-                modules={[Pagination]} 
+                modules={[Pagination, Navigation, Autoplay]}
                 className='h-[630px] max-[1200px]:h-[500px] max-[900px]:h-[400px] max-[700px]:h-[354px]'
             >
                 {images.map((item, index) => (
