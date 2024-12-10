@@ -6,13 +6,13 @@ import { IMenuItem, IMenuItemsChildren } from "@/types/menuItems.types"
 import clsx from "clsx"
 import { ChevronUp } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface Props {
     className?: string
 }
 
-export default function HeaderMenu ({
+export default function HeaderMenuDesktop ({
     className
 }: Props) {
     const [isActiveMenuChildren, setIsActiveMenuChildren] = useState(false)
@@ -42,8 +42,8 @@ export default function HeaderMenu ({
                             className={clsx(
                                 "absolute left-[-110%] translate-x-[50%] min-w-full mt-[30px] transition-all duration-500 top-0", 
                                 isActiveMenuChildren 
-                                ? "translate-y-[0%] opacity-100 z-[1]" 
-                                : "translate-y-[-100%] opacity-0 -z-[100]"
+                                ? "translate-y-[0%] opacity-100 z-[1] visible" 
+                                : "translate-y-[-50%] opacity-0 -z-[100] invisible"
                             )}>
                                 {
                                     item.children.map(subitem => (
