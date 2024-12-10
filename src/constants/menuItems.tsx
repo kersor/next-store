@@ -7,63 +7,63 @@ export const menuItems: IMenuItem[] = [
         children: [
             {
               name: "Смартфоны и аксессуары",
-              link: "/smartphones"
+              link: "smartphones"
             },
             {
               name: "Ноутбуки и ПК",
-              link: "/laptops"
+              link: "laptops"
             },
             {
               name: "Телевизоры и аудио",
-              link: "/televisions"
+              link: "televisions"
             },
             {
               name: "Фото и видеокамеры",
-              link: "/cameras"
+              link: "cameras"
             },
             {
               name: "Компьютерные аксессуары",
-              link: "/computer-accessories"
+              link: "computer-accessories"
             },
             {
               name: "Игровые приставки и игры",
-              link: "/gaming"
+              link: "gaming"
             },
             {
               name: "Умные устройства",
-              link: "/smart-devices"
+              link: "smart-devices"
             },
             {
               name: "Бытовая техника",
-              link: "/home-appliances"
+              link: "home-appliances"
             },
             {
               name: "Автотовары",
-              link: "/car-accessories"
+              link: "car-accessories"
             },
             {
               name: "Мелкая бытовая техника",
-              link: "/small-appliances"
+              link: "small-appliances"
             },
             {
               name: "Печатная техника",
-              link: "/printers"
+              link: "printers"
             }
         ]          
     },
     {
         name: "Доставка",
-        link: "/delivery",
+        link: "delivery",
         children: []
     },
     {
         name: "Акции",
-        link: "/sales",
+        link: "sales",
         children: []
     },
     {
         name: "Блог",
-        link: "/blog",
+        link: "blog",
         children: []
     },
 ]
