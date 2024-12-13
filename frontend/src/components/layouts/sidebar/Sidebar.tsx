@@ -1,18 +1,17 @@
 import clsx from "clsx"
-import { X } from "lucide-react"
-import { MobileSidebarDefault } from "./MobileSidebarDefault"
+import { MobileSidebarDefault } from "../header/device/mobile/sidebar/MobileSidebarDefault"
+import { PropsWithChildren } from "react"
 
 interface Props {
     className?: string
     isVisibleSidebarMenu: boolean
-    funcSetIsVisibleSidebarMenu: () => void
 }
 
-export const MobileSidebarBody = ({
+export const Sidebar = ({
     className,
     isVisibleSidebarMenu,
-    funcSetIsVisibleSidebarMenu
-}: Props) => {
+    children
+}: PropsWithChildren<Props>) => {
 
     const postion = isVisibleSidebarMenu
     ? "left-0 opacity-100 visible z-[100]"
@@ -24,10 +23,7 @@ export const MobileSidebarBody = ({
             postion,
             className)}
         >
-            <MobileSidebarDefault
-                isVisibleSidebarMenu={isVisibleSidebarMenu}
-                funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu}
-            />
+            {children}
         </div>
     )
 }

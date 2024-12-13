@@ -5,13 +5,11 @@ import React from "react"
 
 interface Props {
     className?: string
-    isVisibleSidebarMenu: boolean
     funcSetIsVisibleSidebarMenu: () => void
 }
 
 export const MobileSidebarDefault = ({
     className,
-    isVisibleSidebarMenu,
     funcSetIsVisibleSidebarMenu
 }: Props) => {
     return (

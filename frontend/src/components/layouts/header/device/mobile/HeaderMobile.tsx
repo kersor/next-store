@@ -4,8 +4,9 @@ import clsx from "clsx"
 import { Menu, Search, ShoppingBag, User2, X } from "lucide-react"
 import Link from "next/link"
 import { InputSearch } from "../../inputSearch"
-import { MobileSidebarBody } from "./sidebar/MobileSidebarBody"
 import { useState } from "react"
+import { Sidebar } from "@/components/layouts/sidebar/Sidebar"
+import { MobileSidebarDefault } from "./sidebar/MobileSidebarDefault"
 
 interface Props {
     className?: string
@@ -32,10 +33,9 @@ export const HeaderMobile = ({
                 <button><Search strokeWidth={2} width={20} /></button>
                 {/* <InputSearch setProductValue={setProductValue} value={value} /> */}
             </Container>
-            <MobileSidebarBody 
-                isVisibleSidebarMenu={isVisibleSidebarMenu}
-                funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu}
-            />
+            <Sidebar isVisibleSidebarMenu={isVisibleSidebarMenu}  >
+                <MobileSidebarDefault funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu}/>
+            </ Sidebar>
         </>
     )
 }
