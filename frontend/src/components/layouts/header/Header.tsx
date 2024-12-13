@@ -1,7 +1,6 @@
 "use client"
 
 import { Container } from "@/components/shared/container/Container"
-import { menuItems } from "@/constants/menuItems"
 import Link from "next/link"
 import HeaderMenu from "./device/desktop/HeaderMenuDesktop"
 import { InputCustom } from "@/components/ui/InputCustom"
@@ -24,7 +23,7 @@ export default function Header ({
     const [productValue, setProductValue] = useState("")
 
     return (
-        <div className="h-[60px]">
+        <div className="h-[60px] relative w-full">
             <HeaderDesktop 
                 className={style.d} 
                 value={productValue} 

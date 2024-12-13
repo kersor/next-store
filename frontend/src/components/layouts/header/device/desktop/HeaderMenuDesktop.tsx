@@ -1,7 +1,7 @@
 "use client"
 
 import { Container } from "@/components/shared/container/Container"
-import { menuItems } from "@/constants/menuItems"
+import { MENU_ITEMS_DESKTOP } from "@/constants/menuItems"
 import { IMenuItem, IMenuItemsChildren } from "@/types/menuItems.types"
 import clsx from "clsx"
 import { ChevronUp } from "lucide-react"
@@ -30,7 +30,7 @@ export default function HeaderMenuDesktop ({
     return (
         <div className="flex gap-7">
             {
-                menuItems.map(item => (
+                MENU_ITEMS_DESKTOP.map(item => (
                     <div onClick={() => funcPushLink(item)} key={item.name} className="relative">
                         <div className="flex gap-1 items-center cursor-pointer">
                             <span>{item.name}</span>
@@ -40,7 +40,7 @@ export default function HeaderMenuDesktop ({
                             !!item.children &&
                             <div 
                             className={clsx(
-                                "absolute left-[-110%] translate-x-[50%] min-w-full mt-[30px] transition-all duration-500 top-0", 
+                                "absolute left-[-110%] translate-x-[50%] min-w-full mt-[40px] transition-all duration-300 top-0", 
                                 isActiveMenuChildren 
                                 ? "translate-y-[0%] opacity-100 z-[1] visible" 
                                 : "translate-y-[-50%] opacity-0 -z-[100] invisible"

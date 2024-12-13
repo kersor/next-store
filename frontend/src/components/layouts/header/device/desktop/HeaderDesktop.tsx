@@ -1,5 +1,4 @@
 import { Container } from "@/components/shared/container/Container"
-import { menuItems } from "@/constants/menuItems"
 import Link from "next/link"
 import { InputCustom } from "@/components/ui/InputCustom"
 import { useState } from "react"

@@ -6,3 +6,8 @@
     font-family: 'kersor';
     src: url('./fonts/kersor.woff2') format('woff2');
 }
+
+html, body {
+    overflow-x: hidden;
+    height: 100%; /* Убедитесь, что высота установлена */
+  }

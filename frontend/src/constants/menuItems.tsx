@@ -1,6 +1,6 @@
 import { IMenuItem } from "@/types/menuItems.types";
 
-export const menuItems: IMenuItem[] = [
+export const MENU_ITEMS_DESKTOP: IMenuItem[] = [
     {
         name: "Категории",
         link: "",
@@ -66,4 +66,27 @@ export const menuItems: IMenuItem[] = [
         link: "blog",
         children: []
     },
+]
+
+export const MENU_ITEMS_MOBILE = [
+  {
+    name: "Категории",
+    link: "",
+    children: []      
+},
+{
+    name: "Доставка",
+    link: "delivery",
+    children: []
+},
+{
+    name: "Акции",
+    link: "sales",
+    children: []
+},
+{
+    name: "Блог",
+    link: "blog",
+    children: []
+},
 ]
