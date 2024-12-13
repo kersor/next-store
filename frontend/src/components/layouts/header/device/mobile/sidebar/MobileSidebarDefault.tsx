@@ -1,28 +1,32 @@
 import { MENU_ITEMS_MOBILE } from "@/constants/menuItems"
 import clsx from "clsx"
-import { X } from "lucide-react"
+import { ChevronDown, X } from "lucide-react"
 import React from "react"
 
 interface Props {
     className?: string
     funcSetIsVisibleSidebarMenu: () => void
+
 }
 
 export const MobileSidebarDefault = ({
     className,
     funcSetIsVisibleSidebarMenu
 }: Props) => {
+    
     return (
         <div className={clsx("", className)}>
             <button onClick={funcSetIsVisibleSidebarMenu} className="w-[20px]">
                 <X width={20} strokeWidth={2} />
             </button>
-            
-
-            <div className="flex flex-col mt-[50px] text-[#5d5d64]">
+            <div className="flex items-center gap-1 pt-[15px] pb-[20px] mt-5"> 
+                <div className="text-[16px]">Чебоксары</div>
+                <ChevronDown size={18} strokeWidth={1.5} /> 
+            </div>
+            <div className="flex flex-col text-[#5d5d64]">
                 {
                     MENU_ITEMS_MOBILE.map((item, index) => (
-                        <div className={clsx("text-[18px] border-t py-[15px] pl-[5px]", MENU_ITEMS_MOBILE.length === ++index && "border-b")} key={item.name}>{item.name}</div>
+                        <div className={clsx("border-t py-[15px] pl-[5px] text-[20px]", MENU_ITEMS_MOBILE.length === ++index && "border-b")} key={item.name}>{item.name}</div>
                     ))
                 }
             </div>

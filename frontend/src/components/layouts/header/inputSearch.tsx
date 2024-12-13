@@ -12,8 +12,8 @@ export const InputSearch = ({
 }: Props) => {
     return (
         <InputCustom
-            classNameInput="w-[200px] text-[#707070] bg-[#f0f0f0]"
-            classNameBox='gap-[5px] bg-[#f0f0f0] px-[10px] py-[5px] rounded-[10px]'
+            classNameInput="w-full text-[#707070] bg-[#f0f0f0]"
+            classNameBox='w-full gap-[5px] bg-[#f0f0f0] px-[10px] py-[5px] rounded-[5px]'
             placeholder="Поиск товара..."
             onChangeHandler={(value: string) => setProductValue(value)}
             value={value}
