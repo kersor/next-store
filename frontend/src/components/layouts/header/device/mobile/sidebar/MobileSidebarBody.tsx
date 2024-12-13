@@ -15,12 +15,12 @@ export const MobileSidebarBody = ({
 }: Props) => {
 
     const postion = isVisibleSidebarMenu
-    ? "right-0 opacity-100 visible z-[100]"
-    : "right-[-100%] opacity-0 invisible -z-[100]"
+    ? "left-0 opacity-100 visible z-[100]"
+    : "left-[-100%] opacity-0 invisible -z-[100]"
 
     return (
         <div className={clsx(
-            "absolute top-0 w-[50%] h-screen bg-white border-l px-[20px] py-[10px] transition-all",
+            "absolute top-0 w-[50%] h-screen bg-white border-l px-[15px] py-[20px] transition-all",
             postion,
             className)}
         >

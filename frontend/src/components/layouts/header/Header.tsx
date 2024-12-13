@@ -23,7 +23,7 @@ export default function Header ({
     const [productValue, setProductValue] = useState("")
 
     return (
-        <div className="h-[60px] relative w-full">
+        <div className="relative w-full">
             <HeaderDesktop 
                 className={style.d} 
                 value={productValue} 

@@ -17,7 +17,7 @@ export const MobileSidebarDefault = ({
     return (
         <div className={clsx("", className)}>
             <button onClick={funcSetIsVisibleSidebarMenu} className="w-[20px]">
-                <X width={20} strokeWidth={1} />
+                <X width={20} strokeWidth={2} />
             </button>
             
 

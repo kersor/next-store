@@ -26,12 +26,11 @@ export const HeaderMobile = ({
 
     return (
         <>
-            <Container className={clsx("flex flex-col", className)}>
-                <div className="flex justify-between items-center">
-                    <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
-                    <Menu onClick={funcSetIsVisibleSidebarMenu} width={20} strokeWidth={2}/>
-                </div>
-                <InputSearch setProductValue={setProductValue} value={value} />
+            <Container className={clsx("flex items-center justify-between", className)}>
+                <Menu onClick={funcSetIsVisibleSidebarMenu} width={20} strokeWidth={2}/>
+                <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
+                <button><Search strokeWidth={2} width={20} /></button>
+                {/* <InputSearch setProductValue={setProductValue} value={value} /> */}
             </Container>
             <MobileSidebarBody 
                 isVisibleSidebarMenu={isVisibleSidebarMenu}
