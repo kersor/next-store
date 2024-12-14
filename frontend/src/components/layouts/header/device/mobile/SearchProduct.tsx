@@ -27,7 +27,7 @@ export const SearchProduct = ({
     return (
         <div className={clsx("absolute top-0 w-full h-screen bg-white transition-all duration-500", position, className)}>
             <div className="flex gap-2 justify-between p-[30px]">
-                <InputSearch setProductValue={setProductValue} value={productValue} /> 
+                <InputSearch setValue={setProductValue} value={productValue} placeholder="Поиск товара..."/> 
                 <button onClick={funcBackPath} className="bg-[#000] text-[#FFF] px-[10px] rounded-[5px]">Отменить</button>
             </div>
             <div className="px-[30px] pb-[30px]">

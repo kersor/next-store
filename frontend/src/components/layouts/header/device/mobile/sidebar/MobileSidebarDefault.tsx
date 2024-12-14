@@ -6,13 +6,17 @@ import React from "react"
 interface Props {
     className?: string
     funcSetIsVisibleSidebarMenu: () => void
-
+    funcSetIsVisibleCategories: () => void
 }
 
 export const MobileSidebarDefault = ({
     className,
-    funcSetIsVisibleSidebarMenu
+    funcSetIsVisibleSidebarMenu,
+    funcSetIsVisibleCategories
 }: Props) => {
+    const funcOnClickSidebarLink = (item: any) => {
+        if(item.name === 'Категории') funcSetIsVisibleCategories()
+    }
     
     return (
         <div className={clsx("", className)}>
@@ -26,7 +30,7 @@ export const MobileSidebarDefault = ({
             <div className="flex flex-col text-[#5d5d64]">
                 {
                     MENU_ITEMS_MOBILE.map((item, index) => (
-                        <div className={clsx("border-t py-[15px] pl-[5px] text-[20px]", MENU_ITEMS_MOBILE.length === ++index && "border-b")} key={item.name}>{item.name}</div>
+                        <div onClick={() => funcOnClickSidebarLink(item)} className={clsx("border-t py-[15px] pl-[5px] text-[20px]", MENU_ITEMS_MOBILE.length === ++index && "border-b")} key={item.name}>{item.name}</div>
                     ))
                 }
             </div>

@@ -8,6 +8,7 @@ import { useState } from "react"
 import { Sidebar } from "@/components/layouts/sidebar/Sidebar"
 import { MobileSidebarDefault } from "./sidebar/MobileSidebarDefault"
 import { SearchProduct } from "./SearchProduct"
+import { MobileSidebarCategories } from "./sidebar/MobileSidebarCategories"
 
 interface Props {
     className?: string
@@ -20,15 +21,62 @@ export const HeaderMobile = ({
     setProductValue,
     value
 }: Props) => {
-    const [isVisibleSidebarMenu, setIsVisibleSidebarMenu] = useState(false)
-    const [isVisibleSearchProduct, setIsVisibleSearchProduct] = useState(false)
+    const [isVisibleHeaderSidebar, setIsVisibleHeaderSidebar] = useState({
+        isVisibleSidebarMenu: false,
+        isVisibleSearchProduct: false,
+        isVisibleСategories: false
+    })
+
 
     const funcSetIsVisibleSidebarMenu = () => {
-        setIsVisibleSidebarMenu(prev => !prev)
+        if(!isVisibleHeaderSidebar.isVisibleSidebarMenu) {
+            setIsVisibleHeaderSidebar(prev => ({
+                isVisibleSearchProduct: false,
+                isVisibleSidebarMenu: true,
+                isVisibleСategories: false
+            }))
+        }
+        else {
+            setIsVisibleHeaderSidebar(prev => ({
+                isVisibleSearchProduct: false,
+                isVisibleSidebarMenu: false,
+                isVisibleСategories: false
+            }))
+        }
     }
 
     const funcSetIsVisibleSearchProduct = () => {
-        setIsVisibleSearchProduct(prev => !prev)
+        if(!isVisibleHeaderSidebar.isVisibleSearchProduct) {
+            setIsVisibleHeaderSidebar(prev => ({
+                isVisibleSearchProduct: true,
+                isVisibleSidebarMenu: false,
+                isVisibleСategories: false
+            }))
+        }
+        else {
+            setIsVisibleHeaderSidebar(prev => ({
+                isVisibleSearchProduct: false,
+                isVisibleSidebarMenu: false,
+                isVisibleСategories: false
+            }))
+        }
+    }
+
+    const funcSetIsVisibleCategories = () => {
+        if(!isVisibleHeaderSidebar.isVisibleСategories) {
+            setIsVisibleHeaderSidebar(prev => ({
+                isVisibleSearchProduct: false,
+                isVisibleSidebarMenu: false,
+                isVisibleСategories: true
+            }))
+        }
+        else {
+            setIsVisibleHeaderSidebar(prev => ({
+                isVisibleSearchProduct: false,
+                isVisibleSidebarMenu: false,
+                isVisibleСategories: false
+            }))
+        }
     }
 
     return (
@@ -38,10 +86,18 @@ export const HeaderMobile = ({
                 <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
                 <button onClick={funcSetIsVisibleSearchProduct}><Search strokeWidth={2} width={20} /></button>
             </Container>
-            <Sidebar funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu} isVisibleSidebarMenu={isVisibleSidebarMenu}  >
-                <MobileSidebarDefault funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu} />
+            <Sidebar funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
+                <MobileSidebarDefault 
+                    funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu} 
+                    funcSetIsVisibleCategories={funcSetIsVisibleCategories}
+                />
             </Sidebar>
-            <SearchProduct isVisibleSearchProduct={isVisibleSearchProduct} setIsVisibleSearchProduct={funcSetIsVisibleSearchProduct} />
+            <SearchProduct isVisibleSearchProduct={isVisibleHeaderSidebar.isVisibleSearchProduct} setIsVisibleSearchProduct={funcSetIsVisibleSearchProduct} />
+            <Sidebar width={100} funcSetIsVisibleSidebar={funcSetIsVisibleCategories} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleСategories}  >
+                <MobileSidebarCategories 
+                    funcSetIsVisibleCategories={funcSetIsVisibleCategories} 
+                />
+            </Sidebar>
         </>
     )
 }

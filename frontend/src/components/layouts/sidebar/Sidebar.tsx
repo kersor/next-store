@@ -4,26 +4,30 @@ import { PropsWithChildren } from "react"
 
 interface Props {
     className?: string
-    isVisibleSidebarMenu: boolean
-    funcSetIsVisibleSidebarMenu: () => void
+    isVisibleSidebar: boolean
+    funcSetIsVisibleSidebar: () => void,
+    width?: number
 }
 
 export const Sidebar = ({
     className,
-    isVisibleSidebarMenu,
+    isVisibleSidebar,
     children,
-    funcSetIsVisibleSidebarMenu
+    funcSetIsVisibleSidebar,
+    width = 50
 }: PropsWithChildren<Props>) => {
 
     const funcOnClickNotSidebar = (e: any) => {
-        if(e.target.dataset.id !== undefined) funcSetIsVisibleSidebarMenu()
+        if(e.target.dataset.id !== undefined) funcSetIsVisibleSidebar()
     }
 
-    const postionSidebar = isVisibleSidebarMenu
+    const w = width === 100 ? "w-full" : `w-[${width}%]`
+
+    const postionSidebar = isVisibleSidebar
     ? "left-0 opacity-100 visible z-[100]"
     : "left-[-100%] opacity-0 invisible -z-[100]"
 
-    const positionBody = isVisibleSidebarMenu
+    const positionBody = isVisibleSidebar
     ? "opacity-100 visible z-[100]"
     : "opacity-0 invisible -z-[100]"
 
@@ -33,7 +37,8 @@ export const Sidebar = ({
             positionBody
         )} data-id={true}>
             <div className={clsx(
-                "absolute top-0 w-[50%] h-screen bg-white border-l px-[15px] py-[20px] transition-all duration-500",
+                "absolute top-0 h-screen bg-white border-l px-[15px] py-[20px] transition-all duration-500",
+                w,
                 postionSidebar,
                 className)}
             >
