@@ -19,20 +19,19 @@ export const MobileSidebarDefault = ({
     }
     
     return (
-        <div className={clsx("", className)}>
+        <div className={clsx("px-[15px]", className)}>
             <button onClick={funcSetIsVisibleSidebarMenu} className="w-[20px]">
                 <X width={20} strokeWidth={2} />
             </button>
-            <div className="flex items-center gap-1 pt-[15px] pb-[20px] mt-5"> 
-                <div className="text-[16px]">Чебоксары</div>
-                <ChevronDown size={18} strokeWidth={1.5} /> 
-            </div>
-            <div className="flex flex-col text-[#5d5d64]">
-                {
-                    MENU_ITEMS_MOBILE.map((item, index) => (
-                        <div onClick={() => funcOnClickSidebarLink(item)} className={clsx("border-t py-[15px] pl-[5px] text-[20px]", MENU_ITEMS_MOBILE.length === ++index && "border-b")} key={item.name}>{item.name}</div>
-                    ))
-                }
+
+            <div className="mt-10">
+                <div className="flex flex-col text-[#5d5d64]">
+                    {
+                        MENU_ITEMS_MOBILE.map((item, index) => (
+                            <div onClick={() => funcOnClickSidebarLink(item)} className={clsx("border-t py-[15px] pl-[5px] text-[17px]", MENU_ITEMS_MOBILE.length === ++index && "border-b")} key={item.name}>{item.name}</div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

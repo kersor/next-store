@@ -11,6 +11,8 @@ import HeaderMenuDesktop from "./device/desktop/HeaderMenuDesktop"
 import { HeaderDesktop } from "./device/desktop/HeaderDesktop"
 import { HeaderMobile } from "./device/mobile/HeaderMobile"
 import style from './style.module.scss'
+import { MobileSidebarDefault } from "./device/mobile/sidebar/MobileSidebarDefault"
+import { Sidebar } from "../sidebar/Sidebar"
 
 interface Props {
     className?: string
@@ -33,7 +35,13 @@ export default function Header ({
                 className={style.m} 
                 value={productValue} 
                 setProductValue={setProductValue}
-            />            
+            />     
+            {/* <Sidebar width="w-[50%]" funcSetIsVisibleSidebar={() => console.log()} isVisibleSidebar={true}  >
+                <MobileSidebarDefault 
+                    funcSetIsVisibleSidebarMenu={() => console.log()} 
+                    funcSetIsVisibleCategories={() => console.log()}
+                />
+            </Sidebar>        */}
         </div>
     )
 }

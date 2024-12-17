@@ -86,14 +86,14 @@ export const HeaderMobile = ({
                 <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
                 <button onClick={funcSetIsVisibleSearchProduct}><Search strokeWidth={2} width={20} /></button>
             </Container>
-            <Sidebar funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
+            <Sidebar width="w-[50%]" funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
                 <MobileSidebarDefault 
                     funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu} 
                     funcSetIsVisibleCategories={funcSetIsVisibleCategories}
                 />
             </Sidebar>
             <SearchProduct isVisibleSearchProduct={isVisibleHeaderSidebar.isVisibleSearchProduct} setIsVisibleSearchProduct={funcSetIsVisibleSearchProduct} />
-            <Sidebar width={100} funcSetIsVisibleSidebar={funcSetIsVisibleCategories} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleСategories}  >
+            <Sidebar width="w-[100%]" funcSetIsVisibleSidebar={funcSetIsVisibleCategories} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleСategories}  >
                 <MobileSidebarCategories 
                     funcSetIsVisibleCategories={funcSetIsVisibleCategories} 
                 />
