@@ -13,7 +13,11 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        PetrovSans: 'PetrovSans'
+        StolzlRegular: 'StolzlRegular',
+        StolzlLight: 'StolzlLight',
+        StolzlMedium: 'StolzlMedium',
+        StolzlThin: 'StolzlThin',
+        StolzlBold: 'StolzlBold',
       }
     },
   },

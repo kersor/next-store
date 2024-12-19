@@ -17,7 +17,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className="font-PetrovSans relative">
+      <body className="font-StolzlLight relative">
         <Header />
         
         {children}

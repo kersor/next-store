@@ -3,9 +3,31 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'PetrovSans';
-    src: url('./fonts/PetrovSans-Trial-Regular.woff2') format('woff2');
+    font-family: 'StolzlRegular';
+    src: url('./fonts/stolzl_regular.otf') format('woff2');
 }
+
+@font-face {
+    font-family: 'StolzlLight';
+    src: url('./fonts/stolzl_light.otf') format('woff2');
+}
+
+@font-face {
+    font-family: 'StolzlMedium';
+    src: url('./fonts/stolzl_medium.otf') format('woff2');
+}
+
+@font-face {
+    font-family: 'StolzlThin';
+    src: url('./fonts/stolzl_thin.otf') format('woff2');
+}
+
+@font-face {
+    font-family: 'StolzlBold';
+    src: url('./fonts/stolzl_bold.otf') format('woff2');
+}
+
+
 
 
 

@@ -22,7 +22,7 @@ export const HeaderDesktop = ({
 
 
     return (
-        <Container className={clsx("flex justify-between items-center", className)}>
+        <Container className={clsx("flex justify-between items-center text-[14px]", className)}>
             <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
 
             <div className="flex items-center relative gap-10"> 
