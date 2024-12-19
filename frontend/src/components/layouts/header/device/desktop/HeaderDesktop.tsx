@@ -20,6 +20,7 @@ export const HeaderDesktop = ({
     value
 }: Props) => {
 
+
     return (
         <Container className={clsx("flex justify-between items-center", className)}>
             <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
@@ -27,8 +28,9 @@ export const HeaderDesktop = ({
             <div className="flex items-center relative gap-10"> 
                 <HeaderMenuDesktop />
                 <InputSearch 
-                    setProductValue={setProductValue}
+                    onChangeHandler={(val: string) => setProductValue(val)}
                     value={value}
+                    placeholder=""
                 />
 
                 <div className="flex items-center gap-2">

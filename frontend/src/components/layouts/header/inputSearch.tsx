@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { Search, X } from "lucide-react"
 
 interface Props {
-    setValue: (value: string) => void
+    onChangeHandler: (inputValue: string) => void
     value: string
     placeholder: string
     classNameInput?: string
@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const InputSearch = ({
-    setValue,
+    onChangeHandler,
     value,
     placeholder,
     classNameInput,
@@ -22,10 +22,10 @@ export const InputSearch = ({
             classNameInput={clsx("w-full text-[#707070] bg-[#f0f0f0]", classNameInput)}
             classNameBox={clsx('w-full gap-[5px] bg-[#f0f0f0] px-[10px] py-[5px] rounded-[5px]', classNameBox)}
             placeholder={placeholder}
-            onChangeHandler={(value: string) => setValue(value)}
+            onChangeHandler={(value: string) => onChangeHandler(value)}
             value={value}
         >
-            <button onClick={() => setValue("")}>{!!value.length ? <X strokeWidth={1} width={17} /> : <Search strokeWidth={1} width={17} />}</button>
+            <button onClick={() => onChangeHandler("")}>{!!value.length ? <X strokeWidth={1} width={17} /> : <Search strokeWidth={1} width={17} />}</button>
         </InputCustom>
     )
 }

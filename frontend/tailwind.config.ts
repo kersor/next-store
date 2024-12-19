@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        kersor: 'kersor'
+        PetrovSans: 'PetrovSans'
       }
     },
   },

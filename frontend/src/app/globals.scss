@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'kersor';
-    src: url('./fonts/kersor.woff2') format('woff2');
+    font-family: 'PetrovSans';
+    src: url('./fonts/PetrovSans-Trial-Regular.woff2') format('woff2');
 }
+
+
 
 html, body {
     overflow-x: hidden;
