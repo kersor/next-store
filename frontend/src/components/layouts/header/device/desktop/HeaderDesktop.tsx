@@ -28,9 +28,9 @@ export const HeaderDesktop = ({
             <div className="flex items-center relative gap-10"> 
                 <HeaderMenuDesktop />
                 <InputSearch 
-                    onChangeHandler={(val: string) => setProductValue(val)}
+                    setValue={(val: string) => setProductValue(val)}
                     value={value}
-                    placeholder=""
+                    placeholder="Поиск товара..."
                 />
 
                 <div className="flex items-center gap-2">

@@ -32,7 +32,7 @@ export const MobileSidebarCategories = ({
             <div className="flex flex-col text-[#5d5d64]">
                 {
                     MENU_CATEGORIES.map((item, index) => (
-                        <div  className={clsx("border-t py-[15px] pl-[5px] text-[18px]")} key={item.name}>{item.name}</div>
+                        <div  className={clsx("border-t py-[15px] pl-[5px] text-[14px]")} key={item.name}>{item.name}</div>
                     ))
                 }
             </div>

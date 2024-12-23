@@ -7,7 +7,7 @@ interface Props {
     classNameBox?: string
     type?: string
     placeholder?: string
-    onChangeHandler: (value: string) => void
+    setValue: (value: string) => void
     value: string
     icon?: React.ElementType
 }
@@ -17,7 +17,7 @@ export const InputCustom = ({
     classNameBox,
     type = "text",
     placeholder = "",
-    onChangeHandler,
+    setValue,
     value,
     icon: Icon,
     children
@@ -30,7 +30,7 @@ export const InputCustom = ({
                 className={clsx("w-full outline-0", classNameInput)}
                 placeholder={placeholder}
                 value={value}
-                onChange={(e) => onChangeHandler(e.target.value)}
+                onChange={(e) => setValue(e.target.value)}
             />
             { children }
         </div>
