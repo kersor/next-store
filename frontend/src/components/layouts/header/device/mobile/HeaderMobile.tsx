@@ -88,7 +88,7 @@ export const HeaderMobile = ({
                     <Menu onClick={funcSetIsVisibleSidebarMenu} width={20} strokeWidth={2}/>
                 </div>
             </Container>
-            <Sidebar width="w-[50%]" funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
+            <Sidebar width="w-[75%] max-[600px]:w-full" funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
                 <MobileSidebarDefault 
                     funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu} 
                     funcSetIsVisibleCategories={funcSetIsVisibleCategories}
