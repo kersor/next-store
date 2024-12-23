@@ -70,9 +70,19 @@ export const MENU_ITEMS_DESKTOP: IMenuItem[] = [
 
 export const MENU_ITEMS_MOBILE: IMenuItem[] = [
   {
-    name: "Категории",
-    link: "",
-    children: []      
+      name: "Категории",
+      link: "",
+      children: []      
+  },
+  {
+      name: "Корзина",
+      link: "/cart",
+      children: []
+  },
+  {
+      name: "Избранное",
+      link: "/favorites",
+      children: []
   },
   {
       name: "Доставка",
@@ -89,6 +99,11 @@ export const MENU_ITEMS_MOBILE: IMenuItem[] = [
       link: "blog",
       children: []
   },
+  {
+      name: "Войти",
+      link: "/auth",
+      children: []
+  }
 ]
 
 export const MENU_CATEGORIES = [
