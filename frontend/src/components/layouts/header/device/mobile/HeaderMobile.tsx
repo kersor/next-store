@@ -82,9 +82,11 @@ export const HeaderMobile = ({
     return (
         <>
             <Container className={clsx("flex items-center justify-between", className)}>
-                <Menu onClick={funcSetIsVisibleSidebarMenu} width={20} strokeWidth={2}/>
-                <Link className="uppercase text-[30px] font-semibold" href="/">kersor</Link>
-                <button onClick={funcSetIsVisibleSearchProduct}><Search strokeWidth={2} width={20} /></button>
+                <Link className="uppercase text-[30px] " href="/"><img src="/logo-name.svg" alt="Logo" /></Link>
+                <div className="flex gap-5">
+                    <button onClick={funcSetIsVisibleSearchProduct}><Search strokeWidth={2} width={20} /></button>
+                    <Menu onClick={funcSetIsVisibleSidebarMenu} width={20} strokeWidth={2}/>
+                </div>
             </Container>
             <Sidebar width="w-[50%]" funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
                 <MobileSidebarDefault 

@@ -6,7 +6,6 @@ import { ArrowLeft, Search, ShoppingBag, ShoppingBasket, User2, X } from "lucide
 import clsx from "clsx"
 import HeaderMenuDesktop from "./HeaderMenuDesktop"
 import { InputSearch } from "../../inputSearch"
-import LogoName from '@/../public/logo-name.svg'
 
 
 interface Props {

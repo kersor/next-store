@@ -22,8 +22,8 @@ export const Sidebar = ({
     }    
     
     const postionSidebar = isVisibleSidebar
-    ? "left-0 opacity-100 visible z-[100]"
-    : "left-[-100%] opacity-0 invisible -z-[100]"
+    ? "right-0 opacity-100 visible z-[100]"
+    : "right-[-100%] opacity-0 invisible -z-[100]"
 
     const positionBody = isVisibleSidebar
     ? "opacity-100 visible z-[100]"

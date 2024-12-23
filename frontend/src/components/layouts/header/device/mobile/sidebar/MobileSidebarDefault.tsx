@@ -20,9 +20,11 @@ export const MobileSidebarDefault = ({
     
     return (
         <div className={clsx("px-[15px]", className)}>
-            <button onClick={funcSetIsVisibleSidebarMenu} className="w-[20px]">
-                <X width={20} strokeWidth={2} />
-            </button>
+            <div className="flex justify-end">
+                <button onClick={funcSetIsVisibleSidebarMenu} className="w-[20px]">
+                    <X width={20} strokeWidth={2} />
+                </button>
+            </div>
 
             <div className="mt-10">
                 <div className="flex flex-col text-[#5d5d64]">
