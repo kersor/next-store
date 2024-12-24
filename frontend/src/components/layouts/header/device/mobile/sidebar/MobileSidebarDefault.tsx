@@ -6,16 +6,14 @@ import React from "react"
 interface Props {
     className?: string
     funcSetIsVisibleSidebarMenu: () => void
-    funcSetIsVisibleCategories: () => void
 }
 
 export const MobileSidebarDefault = ({
     className,
     funcSetIsVisibleSidebarMenu,
-    funcSetIsVisibleCategories
 }: Props) => {
     const funcOnClickSidebarLink = (item: any) => {
-        if(item.name === 'Категории') funcSetIsVisibleCategories()
+        
     }
     
     return (

@@ -36,12 +36,6 @@ export default function Header ({
                 value={productValue} 
                 setProductValue={setProductValue}
             />     
-            {/* <Sidebar width="w-[50%]" funcSetIsVisibleSidebar={() => console.log()} isVisibleSidebar={true}  >
-                <MobileSidebarDefault 
-                    funcSetIsVisibleSidebarMenu={() => console.log()} 
-                    funcSetIsVisibleCategories={() => console.log()}
-                />
-            </Sidebar>        */}
         </div>
     )
 }

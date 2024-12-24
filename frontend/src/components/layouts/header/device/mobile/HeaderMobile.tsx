@@ -8,7 +8,6 @@ import { useState } from "react"
 import { Sidebar } from "@/components/layouts/sidebar/Sidebar"
 import { MobileSidebarDefault } from "./sidebar/MobileSidebarDefault"
 import { SearchProduct } from "./SearchProduct"
-import { MobileSidebarCategories } from "./sidebar/MobileSidebarCategories"
 
 interface Props {
     className?: string
@@ -62,23 +61,6 @@ export const HeaderMobile = ({
         }
     }
 
-    const funcSetIsVisibleCategories = () => {
-        if(!isVisibleHeaderSidebar.isVisibleСategories) {
-            setIsVisibleHeaderSidebar(prev => ({
-                isVisibleSearchProduct: false,
-                isVisibleSidebarMenu: false,
-                isVisibleСategories: true
-            }))
-        }
-        else {
-            setIsVisibleHeaderSidebar(prev => ({
-                isVisibleSearchProduct: false,
-                isVisibleSidebarMenu: false,
-                isVisibleСategories: false
-            }))
-        }
-    }
-
     return (
         <>
             <Container className={clsx("flex items-center justify-between", className)}>
@@ -91,15 +73,10 @@ export const HeaderMobile = ({
             <Sidebar width="w-[75%] max-[600px]:w-full" funcSetIsVisibleSidebar={funcSetIsVisibleSidebarMenu} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleSidebarMenu}  >
                 <MobileSidebarDefault 
                     funcSetIsVisibleSidebarMenu={funcSetIsVisibleSidebarMenu} 
-                    funcSetIsVisibleCategories={funcSetIsVisibleCategories}
+
                 />
             </Sidebar>
             <SearchProduct isVisibleSearchProduct={isVisibleHeaderSidebar.isVisibleSearchProduct} setIsVisibleSearchProduct={funcSetIsVisibleSearchProduct} />
-            <Sidebar width="w-[100%]" funcSetIsVisibleSidebar={funcSetIsVisibleCategories} isVisibleSidebar={isVisibleHeaderSidebar.isVisibleСategories}  >
-                <MobileSidebarCategories 
-                    funcSetIsVisibleCategories={funcSetIsVisibleCategories} 
-                />
-            </Sidebar>
         </>
     )
 }
