@@ -6,7 +6,7 @@ import Link from "next/link"
 import { InputSearch } from "../../inputSearch"
 import { useState } from "react"
 import { Sidebar } from "@/components/layouts/sidebar/Sidebar"
-import { MobileSidebarDefault } from "./sidebar/MobileSidebarDefault"
+import { MobileSidebarDefault } from "./MobileSidebarDefault"
 import { SearchProduct } from "./SearchProduct"
 
 interface Props {

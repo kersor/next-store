@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { MobileSidebarDefault } from "../header/device/mobile/sidebar/MobileSidebarDefault"
+import { MobileSidebarDefault } from "../header/device/mobile/MobileSidebarDefault"
 import { PropsWithChildren } from "react"
 
 interface Props {

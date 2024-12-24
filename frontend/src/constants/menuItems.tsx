@@ -50,7 +50,7 @@ export const MENU_ITEMS_MOBILE: IMenuItem[] = [
   }
 ]
 
-export const MENU_CATEGORIES = [
+export const CATEGORIES = [
   {
     name: "Смартфоны и аксессуары",
     link: "smartphones"

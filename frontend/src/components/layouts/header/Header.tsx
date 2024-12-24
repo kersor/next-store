@@ -11,7 +11,7 @@ import HeaderMenuDesktop from "./device/desktop/HeaderMenuDesktop"
 import { HeaderDesktop } from "./device/desktop/HeaderDesktop"
 import { HeaderMobile } from "./device/mobile/HeaderMobile"
 import style from './style.module.scss'
-import { MobileSidebarDefault } from "./device/mobile/sidebar/MobileSidebarDefault"
+import { MobileSidebarDefault } from "./device/mobile/MobileSidebarDefault"
 import { Sidebar } from "../sidebar/Sidebar"
 
 interface Props {
